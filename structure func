@@ -1,0 +1,26 @@
+//passing structure to function
+#include<stdio.h>
+#include<string.h>
+struct student
+{
+int id;
+char name[50];
+float percentage;
+};
+void function(struct student *r);
+int main()
+{
+struct student r;
+r.id= 201603028;
+strcpy(r.name,"meenakshi");
+r.percentage=98.5;
+function(&r);
+return 0;
+}
+void function(struct student *r)
+{
+printf("ID :%d\n",r->id);
+printf("NAME :%s\n",r->name);
+printf("PERCENTAGE :%f\n",r->percentage);
+}
+~
